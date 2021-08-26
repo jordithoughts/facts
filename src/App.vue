@@ -1,12 +1,10 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="https://vuejs.org/images/logo.png">
-    <Command msg="Welcome to My Vue.js App"/>
+    <Command />
   </div>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
 import Command from './components/Command.vue'
 
 export default {
