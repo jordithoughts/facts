@@ -8,7 +8,7 @@
 import Command from './components/Command.vue'
 
 export default {
-  name: 'App',
+  name: 'App', 
   components: {
     Command
   }

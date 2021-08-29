@@ -1,15 +1,17 @@
 <template>
   <div>
     <h1>Enter your command:</h1>
-    <textarea v-model="cmd" @keypress="keypress" cols=45 rows=1></textarea>
+    <textarea v-model="cmd" @ @keypress="keypress" cols=45 rows=1></textarea>
     <div>
       <span v-for="item in suggestions">
         {{item}}<br>
-      </span>
+      </span> 
     </div>
 </template>
 
 <script>
+import {execute} from '../model/facts.js';
+
 export default {
   name: 'Command',
   props: {
@@ -28,8 +30,12 @@ export default {
     }
   },
   methods:{
-    keypress(x){
-      alert('Hi'+x.key);
+    keypress(e){
+      if(e.keyCode==13){
+        alert("return");
+        execute(this.cmd);
+      }
+
     }
   },
   mounted(){
